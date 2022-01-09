@@ -11,11 +11,10 @@ class Adapter(
 ) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
     // create an inner class with name ViewHolder
-    // It takes a view argument, in which pass the generated class of single_item.xml
-    // ie SingleItemBinding and in the RecyclerView.ViewHolder(binding.root) pass it like this
+    // It takes a view argument, in which pass the generated class of item_row.xml
+    // ie ItemRowBinding and in the RecyclerView.ViewHolder(binding.root) pass it like this
     inner class ViewHolder(val binding: ItemRowBinding) : RecyclerView.ViewHolder(binding.root)
 
-    // inside the onCreateViewHolder inflate the view of SingleItemBinding
     // and return new ViewHolder object containing this layout
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -32,7 +31,7 @@ class Adapter(
         }
     }
 
-    // return the size of languageList
+    // return the size of List
     override fun getItemCount(): Int {
         return dataList!!.size
     }
