@@ -1,0 +1,2 @@
+rootProject.name = "RecyclerViewWithDataBinding"
+include ':app'
